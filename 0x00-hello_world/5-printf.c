@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
- * main - main block
- * Return: 0
+ *main - Entry point
+ *
+ *My hello,print test
+ *Return:Return 1 after the program execution
  */
 int main(void)
 {
