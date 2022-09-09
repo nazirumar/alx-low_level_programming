@@ -1,22 +1,50 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
 /**
- *  * main - main block
- *   * Description: prints all single digit numbers of base 10
- *    * starting from 0, followed by a new line.
- *     * Return: 0
- *      */
+ * main - main block
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Return: 0
+ */
 int main(void)
 {
-		char c = '0';
+int c;
+int d;
+int e;
+int f = 0;
 
-			while (c <= '9')
+while (f < 10)
+{
+	e = 0;
+	while (e < 10)
+	{
+		d = 0;
+		while (d < 10)
+		{
+			c = 0;
+			while (c < 10)
+			{
+				if (!(f == c && e == d))
+				{
+					putchar('0' + f);
+					putchar('0' + e);
+					putchar(' ');
+					putchar('0' + d);
+					putchar('0' + c);
+					if (!(f + e == 18 && c + d == 17 && d == 9))
 					{
-								putchar(c);
-										c++;
-											}
-
-				putchar('\n');
-					return (0);
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				c++;
+			}
+			d++;
+		}
+		e++;
+	}
+	f++;
+}
+putchar('\n');
+return (0);
 }
